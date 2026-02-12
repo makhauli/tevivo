@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<title>Te Vivo</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  color: #fff;
+  text-align: center;
+  overflow-x: hidden;
+  background: linear-gradient(-45deg, #2b0f1f, #140a18, #3d0f2e, #1a0015);
+  background-size: 400% 400%;
+  animation: gradient 12s ease infinite;
+}
+
+@keyframes gradient {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+section {
+  max-width: 800px;
+  margin: auto;
+  padding: 60px 20px;
+  position: relative;
+  z-index: 2;
+}
+
+h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 20px;
+  color: #ffb6c1;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 20px;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.data {
+  font-size: 28px;
+  margin-top: 60px;
+  color: #ffc0cb;
+}
+
+.final {
+  font-size: 28px;
+  margin-top: 80px;
+  color: #ffdada;
+}
+
+/* FOTOS */
+.gallery {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  margin: 40px auto;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+  box-shadow: 0 0 25px rgba(255, 182, 193, 0.6);
+}
+
+.gallery img.active {
+  opacity: 1;
+}
+
+/* Corações */
+.heart {
+  position: fixed;
+  color: #ff6b81;
+  font-size: 20px;
+  animation: float 6s linear infinite;
+  z-index: 0;
+}
+
+@keyframes float {
+  0% {transform: translateY(100vh) scale(1);}
+  100% {transform: translateY(-10vh) scale(1.5);}
+}
+
+button {
+  background: #ff6b81;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  color: white;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+</style>
+</head>
+
+<body>
+
+<section>
+
+<h1>Te Vivo</h1>
+<h2>para minha moreninha meu amor minha vida meu bem</h2>
+
+<div class="gallery">
+  <img src="foto1.jpeg" class="active">
+  <img src="foto2.jpeg.jpg">
+</div>
+
+<p>dá o play antes de ler 🤍</p>
+
+<button onclick="document.getElementById('music').play()">▶ tocar música</button>
+
+<audio id="music" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+
+<p>
+minha moreninha<br>
+desde que vc chegou tudo mudou em mim<br>
+é como se o mundo tivesse ficado mais calmo só pq vc existe<br>
+meu amor vc é aquele tipo de pessoa que não passa pela vida da gente em vão
+</p>
+
+<p>
+te vivo em cada detalhe<br>
+no jeito que vc sorri<br>
+no jeito que vc fala comigo<br>
+na sua voz que me acalma quando tudo parece bagunçado<br>
+minha vida vc nem imagina o quanto me faz bem
+</p>
+
+<p>
+meu bem<br>
+eu penso em vc quando acordo<br>
+penso em vc quando o dia aperta<br>
+penso em vc quando a noite chega<br>
+vc mora em mim de um jeito que não dá pra explicar só sentir
+</p>
+
+<p>
+assim como na música<br>
+eu te vivo pq te amar virou parte de quem eu sou<br>
+não é escolha é sentimento<br>
+é natural é intenso é verdadeiro<br>
+vc é meu lugar seguro
+</p>
+
+<p>
+minha moreninha linda<br>
+se algum dia vc duvidar<br>
+lembra que aqui tem alguém que te ama do jeito mais sincero possível<br>
+alguém que te escolhe todos os dias<br>
+alguém que te vive
+</p>
+
+<p>
+eu te amo<br>
+hoje amanhã e enquanto existir sentimento dentro de mim
+</p>
+
+<p class="data">19/12/2025</p>
+
+<p>
+o dia que eu não imaginava<br>
+mas que mudou tudo em mim
+</p>
+
+<p>
+naquele dia eu me apaixonei<br>
+não foi só por vc<br>
+foi pelo jeito que nossos olhares se encontraram<br>
+tão intenso que parecia que o mundo tinha ficado em silêncio
+</p>
+
+<p>
+eu me apaixonei pelo seu olhar<br>
+pq ali tinha verdade<br>
+tinha sentimento<br>
+tinha algo que me puxou pra vc sem pedir permissão
+</p>
+
+<p>
+me apaixonei pela conexão<br>
+sem uma palavra<br>
+sem um toque<br>
+só dois olhares que conversaram mais do que qualquer frase
+</p>
+
+<p>
+naquele 19 de dezembro<br>
+eu não me apaixonei por um momento<br>
+eu me apaixonei pela minha moreninha<br>
+pela mulher que hoje é meu amor<br>
+minha vida<br>
+meu bem
+</p>
+
+<p>
+e desde aquele olhar<br>
+eu nunca mais fui o mesmo<br>
+pq ali começou algo que eu quero viver todos os dias com vc
+</p>
+
+<p class="final">eu te vivo todos os dias 🤍</p>
+
+</section>
+
+<script>
+let images = document.querySelectorAll(".gallery img");
+let index = 0;
+
+setInterval(() => {
+  images[index].classList.remove("active");
+  index = (index + 1) % images.length;
+  images[index].classList.add("active");
+}, 4000);
+
+function createHeart() {
+  const heart = document.createElement("div");
+  heart.classList.add("heart");
+  heart.innerHTML = "🤍";
+  heart.style.left = Math.random() * 100 + "vw";
+  document.body.appendChild(heart);
+  setTimeout(() => heart.remove(), 6000);
+}
+
+setInterval(createHeart, 400);
+</script>
+
+</body>
+</html>
